@@ -1,13 +1,26 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "nombre": "Admin",
       "email": "admin@gmail.com",
       "password": "1234",
       "rol": "gerente"
     }
   ],
-  "projects": [],
-  "tasks": []
+  "projects": [
+    {
+      "nombre": "Proyecto de prueba",
+      "descripcion": "este es mi primer proyecto",
+      "fechaLimite": "2026-03-26",
+      "estado": "activo",
+      "usuariosAsignados": [
+        "1"
+      ],
+      "tareas": [],
+      "id": "7351"
+    }
+  ],
+  "tasks": [],
+  "$schema": "./node_modules/json-server/schema.json"
 }
