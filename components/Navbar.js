@@ -12,7 +12,7 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <span className="navbar-brand">📋 Gestión de Proyectos</span>
+      <span className="navbar-brand">Gestión de Proyectos</span>
 
       <div className="navbar-user">
         <span>👤 {user?.nombre}</span>
