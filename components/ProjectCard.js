@@ -1,10 +1,11 @@
 import { useAuth } from "../context/AuthContext";
+import { useRouter } from "next/router";
 
 export default function ProjectCard({ proyecto, onEditar, onEliminar }) {
   const { user } = useAuth();
   const esGerente = user?.rol === "gerente";
+  const router = useRouter();
 
-  // Calcular progreso basado en tareas
   const totalTareas = proyecto.tareas?.length || 0;
   const tareasCompletadas =
     proyecto.tareas?.filter((t) => t.estado === "completada").length || 0;
@@ -32,7 +33,7 @@ export default function ProjectCard({ proyecto, onEditar, onEliminar }) {
 
       <div className="progreso-label">
         <span>Progreso</span>
-        <span>{progreso}%</span>
+        <span>{progreso}% ({tareasCompletadas}/{totalTareas} tareas)</span>
       </div>
       <div className="progreso-bar-bg">
         <div
@@ -40,6 +41,13 @@ export default function ProjectCard({ proyecto, onEditar, onEliminar }) {
           style={{ width: `${progreso}%` }}
         />
       </div>
+
+      <button
+        className="btn-ver-tareas"
+        onClick={() => router.push(`/task/${proyecto.id}`)}
+      >
+        📋 Ver Tareas ({totalTareas})
+      </button>
 
       {esGerente && (
         <div className="project-actions">

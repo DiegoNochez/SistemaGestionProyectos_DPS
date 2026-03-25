@@ -19,6 +19,25 @@
       ],
       "tareas": [],
       "id": "7351"
+    },
+    {
+      "nombre": "Proyecto 2",
+      "descripcion": "Proyecto 2 prueba",
+      "fechaLimite": "2026-03-31",
+      "estado": "activo",
+      "usuariosAsignados": [
+        "1"
+      ],
+      "tareas": [
+        {
+          "id": "1774397936312",
+          "titulo": "Tarea 1",
+          "descripcion": "tarea 1",
+          "asignadoA": "Nelson",
+          "estado": "pendiente"
+        }
+      ],
+      "id": "QbkgboEhEi0"
     }
   ],
   "tasks": [],

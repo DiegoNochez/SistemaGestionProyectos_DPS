@@ -97,15 +97,18 @@ export default function ProjectModal({ proyecto, onGuardar, onCerrar }) {
         <div className="form-group">
           <label>Asignar usuarios</label>
           {usuarios.map((u) => (
-            <div key={u.id} style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "6px" }}>
-              <input
-                type="checkbox"
-                checked={usuariosAsignados.includes(u.id)}
-                onChange={() => toggleUsuario(u.id)}
-              />
-              <span style={{ fontSize: "0.9rem" }}>{u.nombre} — <em>{u.rol}</em></span>
-            </div>
-          ))}
+  <label key={u.id} style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "8px", cursor: "pointer" }}>
+    <input
+      type="checkbox"
+      checked={usuariosAsignados.includes(u.id)}
+      onChange={() => toggleUsuario(u.id)}
+      style={{ width: "16px", height: "16px", cursor: "pointer" }}
+    />
+    <span style={{ fontSize: "0.9rem", color: "#334155" }}>
+      {u.nombre} — <em style={{ color: "#64748b" }}>{u.rol}</em>
+    </span>
+  </label>
+))}
         </div>
 
         <div className="modal-actions">
