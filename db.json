@@ -6,6 +6,13 @@
       "email": "admin@gmail.com",
       "password": "1234",
       "rol": "gerente"
+    },
+    {
+      "id": "d498",
+      "nombre": "Bruce Wayne",
+      "email": "usuario1@gmail.com",
+      "password": "123456",
+      "rol": "usuario"
     }
   ],
   "projects": [
@@ -26,7 +33,7 @@
       "fechaLimite": "2026-03-31",
       "estado": "activo",
       "usuariosAsignados": [
-        "1"
+        "d498"
       ],
       "tareas": [
         {
@@ -34,6 +41,13 @@
           "titulo": "Tarea 1",
           "descripcion": "tarea 1",
           "asignadoA": "Nelson",
+          "estado": "completada"
+        },
+        {
+          "id": "1774725265117",
+          "titulo": "Tarea 2",
+          "descripcion": "tarea 2",
+          "asignadoA": "Diego",
           "estado": "pendiente"
         }
       ],
